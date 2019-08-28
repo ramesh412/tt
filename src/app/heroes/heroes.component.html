@@ -1,0 +1,34 @@
+<!-- {{hero.id}}<br>
+
+{{hero.name |uppercase }} -->
+<!-- <div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </label>
+</div> -->
+<!-- <div class="flex">
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" (click)="SelectHero(hero)" [class.selected]="hero === Selecthero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<h2 *ngIf="Selecthero">{{Selecthero.name | uppercase|titlecase}} Details</h2>
+</div> -->
+<div>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="SelectHero(hero)" [class.selected]="hero === Selecthero">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+<div *ngIf="Selecthero">
+  <h2>{{Selecthero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{Selecthero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="Selecthero.name" placeholder="name"/>
+    </label>  
+  </div>
+</div>
+</ul>
+</div>
+<!-- <app-hero-detail [hero]="Selecthero"></app-hero-detail> -->
